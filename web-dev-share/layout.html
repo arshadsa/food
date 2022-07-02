@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style type="text/css">
+			.grid {
+				border: 1px solid #000;
+				display: flex;
+				width: 80%;
+				margin: 0 auto;
+			}
+
+			.grid-2 {
+				display: flex;
+				border-bottom: 1px solid #000;
+				border-right: 1px solid #000;
+				border-left: 1px solid #000;
+				width: 80%;
+				margin: 0 auto;
+			}
+
+			.grid .item {
+				width: 20%;
+				text-align: center;
+				border-right: 1px solid #000;
+			}
+
+			.tp2, .tp5 {
+				border-bottom: 1px solid #000;
+			}
+
+			.tp1 , .tp4, .tp7, .tp8, .tp9 {
+				padding: 150px 0;
+			}
+
+			.tp2, .tp3, .tp5, .tp6 {
+				padding: 75px 0;
+			}
+
+			.tp7 {
+				border: none !important;
+			}
+
+			.tp8, .tp9 {
+				width: 50%;
+				text-align: center;
+			}
+
+			.tp8 {
+				border-right: 1px solid #000;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="grid">
+			<div class="item tp1" tabindex="1">
+				<input type="checkbox" name="topic[]" id="Topic 1" value="Topic 1" data-class="tp1">
+				<label for="Topic 1">Topic 1</label>
+			</div>
+			<div class="item" tabindex="1">
+				<div class="tp2">
+					<input type="checkbox" name="topic[]" id="Topic 2" value="Topic 2" data-class="tp2">
+					<label for="Topic 2">Topic 2</label>
+				</div>
+				<div class="tp3">
+					<input type="checkbox" name="topic[]" id="Topic 3" value="Topic 3" data-class="tp3">
+					<label for="Topic 3">Topic 3</label>
+				</div>
+			</div>
+			<div class="item tp4" tabindex="1">
+				<input type="checkbox" name="topic[]" id="Topic 4" value="Topic 4" data-class="tp4">
+				<label for="Topic 4">Topic 4</label>
+			</div>
+			<div class="item" tabindex="1">
+				<div class="tp5">
+					<input type="checkbox" name="topic[]" id="Topic 5" value="Topic 5" data-class="tp5">
+					<label for="Topic 5">Topic 5</label>
+				</div>
+				<div class="tp6">
+					<input type="checkbox" name="topic[]" id="Topic 6" value="Topic 6" data-class="tp6">
+					<label for="Topic 6">Topic 6</label>
+				</div>
+			</div>
+			<div class="item tp7" tabindex="1">
+				<input type="checkbox" name="topic[]" id="Topic 7" value="Topic 7" data-class="tp7">
+				<label for="Topic 7">Topic 7</label>
+			</div>
+		</div>
+		<div class="grid-2">
+			<div class="item tp8" tabindex="1">
+				<input type="checkbox" name="topic[]" id="Topic 8" value="Topic 8" data-class="tp8">
+				<label for="Topic 8">Topic 8</label>
+			</div>
+			<div class="item tp9" tabindex="1">
+				<input type="checkbox" name="topic[]" id="Topic 9" value="Topic 9" data-class="tp9">
+				<label for="Topic 9">Topic 9</label>
+			</div>
+		</div>
+	</body>
+</html>
