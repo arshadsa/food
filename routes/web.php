@@ -23,5 +23,6 @@ Route::get('/question', [App\Http\Controllers\AnswareController::class, 'questio
 Route::post('/answare/store', [App\Http\Controllers\AnswareController::class, 'answare_store'])->name('answare.store');
 Route::get('/user/profile', [App\Http\Controllers\AnswareController::class, 'user_profile'])->name('user.profile');
 Route::get('/answare/delete/{id}', [App\Http\Controllers\AnswareController::class, 'answare_delete'])->name('answare.delete');
+Route::post('ck-editor/ckimgupload', [App\Http\Controllers\AnswareController::class,'ckimgupload'])->name('ckeditor.upload');
 
 

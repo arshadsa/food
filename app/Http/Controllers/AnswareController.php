@@ -16,54 +16,71 @@ class AnswareController extends Controller
     }
 
     public function question(Request $request) {
-
+    $user = Auth::user()->id;
         if($request->topic1 == 1) {
             $topic1 = 1;
+            $answer1 = Answare::where('user_id',$user)->select('answare1','file1')->first();
         }else{
             $topic1 = 0; 
+            $answer1 = '';
         }
         if($request->topic2 == 1) {
             $topic2 = 1;
+            $answer2 = Answare::where('user_id',$user)->select('answare2','file2')->first();
         }else{
             $topic2 = 0; 
+            $answer2 = '';
         }
         if($request->topic3 == 1) {
             $topic3 = 1;
+            $answer3 = Answare::where('user_id',$user)->select('answare3','file3')->first();
         }else{
-            $topic3 = 0; 
+            $topic3 = 0;  
+            $answer3 = '';
         }
         if($request->topic4 == 1) {
             $topic4 = 1;
+            $answer4 = Answare::where('user_id',$user)->select('answare4','file4')->first();
         }else{
             $topic4 = 0; 
+            $answer4 = '';
         }
         if($request->topic5 == 1) {
             $topic5 = 1;
+            $answer5 = Answare::where('user_id',$user)->select('answare5','file5')->first();
         }else{
             $topic5 = 0; 
+            $answer5 = '';
         }
         if($request->topic6 == 1) {
             $topic6 = 1;
+            $answer6 = Answare::where('user_id',$user)->select('answare6','file6')->first();
         }else{
             $topic6 = 0; 
+            $answer6 = '';
         }
         if($request->topic7 == 1) {
             $topic7 = 1;
+            $answer7 = Answare::where('user_id',$user)->select('answare7','file7')->first();
         }else{
             $topic7 = 0; 
+            $answer7 = '';
         }
         if($request->topic8 == 1) {
             $topic8 = 1;
+            $answer8 = Answare::where('user_id',$user)->select('answare8','file8')->first();
         }else{
             $topic8 = 0; 
+            $answer8 = '';
         }
         if($request->topic9 == 1) {
             $topic9 = 1;
+            $answer9 = Answare::where('user_id',$user)->select('answare9','file9')->first();
         }else{
             $topic9 = 0; 
+            $answer9 = '';
         }
-
-        return view('form', compact('topic1','topic2','topic3','topic4','topic5','topic6','topic7','topic8','topic9'));
+        return view('form', compact('topic1','topic2','topic3','topic4','topic5','topic6','topic7','topic8','topic9','answer1','answer2','answer3','answer4','answer5','answer6','answer7','answer8','answer9'));
 
     }
 
@@ -270,6 +287,25 @@ class AnswareController extends Controller
         return redirect('/user/profile')->with('success', 'Data inserted successfully');
     }
     }
+    public function ckimgupload(Request $request)
+    {
+        if($request->hasFile('upload')) {
+            $origin_Name = $request->file('upload')->getClientOriginalName();
+            $File_Name = pathinfo($origin_Name, PATHINFO_FILENAME);
+            $extension_Name = $request->file('upload')->getClientOriginalExtension();
+            $File_Name = $File_Name.'_'.time().'.'.$extension_Name;
+        
+            $request->file('upload')->move(public_path('/uploads/file/'), $File_Name);
+   
+            $CKEditorFuncNum = $request->input('CKEditorFuncNum');
+            $url = asset('/uploads/file/'.$File_Name); 
+            $msg = 'Image uploaded successfully'; 
+            $response = "<script>window.parent.CKEDITOR.tools.callFunction($CKEditorFuncNum, '$url', '$msg')</script>";
+               
+            @header('Content-type: text/html; charset=utf-8'); 
+            echo $response;
+        }
+    }
 
 
     public function user_profile()
@@ -319,6 +355,5 @@ class AnswareController extends Controller
 
         return redirect('/user/profile')->with('success','Your answar is successfully deleted!');
     }
-
 
 }
