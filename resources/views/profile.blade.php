@@ -249,13 +249,14 @@ a, button, code, div, img, input, label, li, p, pre, select, span, svg, table, t
                           <div class="question">
                             <h4>Food Suppliers and Outlets:</h4>
                           </div>
-                          <p>{{$answares->answare1}}</p>
+                          <p>{!! $answares->answare1 !!}</p>
                           
                           @if($answares->file1 != '')
                           <a href="{{asset('uploads/file/'.$answares->file1)}}" download>{{$answares->file1}}</a>
                           @endif
                       </td>
                       <td>
+                      <a class="btn btn-primary" href="{{url('question?topic1=1')}}">Edit</a> 
                       <a class="btn btn-primary" onclick="return confirm('Are you sure? Delete this data.')" href="{{ route('answare.delete',1) }}">Delete</a>
                       </td>
                     </tr>
@@ -267,13 +268,14 @@ a, button, code, div, img, input, label, li, p, pre, select, span, svg, table, t
                           <div class="question">
                             <h4>Storage and Packaging:</h4>
                           </div>
-                          <p>{{$answares->answare2}}</p>
+                          <p>{!! $answares->answare2 !!}</p>
                           
                           @if($answares->file2 != '')
                           <a href="{{asset('uploads/file/'.$answares->file2)}}" download>{{$answares->file2}}</a>
                           @endif
                       </td>
                       <td>
+                      <a class="btn btn-primary" href="{{url('question?topic2=1')}}">Edit</a>
                       <a class="btn btn-primary" onclick="return confirm('Are you sure? Delete this data.')" href="{{ route('answare.delete',2) }}">Delete</a>
                       </td>
                     </tr>
@@ -285,13 +287,14 @@ a, button, code, div, img, input, label, li, p, pre, select, span, svg, table, t
                           <div class="question">
                             <h4>Food Preparation and Food Waste:</h4>
                           </div>
-                          <p>{{$answares->answare3}}</p>
+                          <p>{!! $answares->answare3 !!}</p>
                           
                           @if($answares->file3 != '')
                           <a href="{{asset('uploads/file/'.$answares->file3)}}" download>{{$answares->file3}}</a>
                           @endif
                       </td>
                       <td>
+                      <a class="btn btn-primary" href="{{url('question?topic3=1')}}">Edit</a>
                       <a class="btn btn-primary" onclick="return confirm('Are you sure? Delete this data.')" href="{{ route('answare.delete',3) }}">Delete</a>
                       </td>
                     </tr>
@@ -303,13 +306,14 @@ a, button, code, div, img, input, label, li, p, pre, select, span, svg, table, t
                           <div class="question">
                             <h4>Staff - Kitchen and Front-of-house:</h4>
                           </div>
-                          <p>{{$answares->answare4}}</p>
+                          <p>{!! $answares->answare4 !!}</p>
                           
                           @if($answares->file4 != '')
                           <a href="{{asset('uploads/file/'.$answares->file4)}}" download>{{$answares->file4}}</a>
                           @endif
                       </td>
                       <td>
+                      <a class="btn btn-primary" href="{{url('question?topic4=1')}}">Edit</a>
                       <a class="btn btn-primary" onclick="return confirm('Are you sure? Delete this data.')" href="{{ route('answare.delete',4) }}">Delete</a>
                       </td>
                     </tr>
@@ -321,13 +325,14 @@ a, button, code, div, img, input, label, li, p, pre, select, span, svg, table, t
                           <div class="question">
                             <h4>Customer Engagement:</h4>
                           </div>
-                          <p>{{$answares->answare5}}</p>
+                          <p>{!! $answares->answare5 !!}</p>
                           
                           @if($answares->file5 != '')
                           <a href="{{asset('uploads/file/'.$answares->file5)}}" download>{{$answares->file5}}</a>
                           @endif
                       </td>
                       <td>
+                      <a class="btn btn-primary" href="{{url('question?topic5=1')}}">Edit</a>
                       <a class="btn btn-primary" onclick="return confirm('Are you sure? Delete this data.')" href="{{ route('answare.delete',5) }}">Delete</a>
                       </td>
                     </tr>
@@ -339,13 +344,14 @@ a, button, code, div, img, input, label, li, p, pre, select, span, svg, table, t
                           <div class="question">
                             <h4>Menu:</h4>
                           </div>
-                          <p>{{$answares->answare6}}</p>
+                          <p>{!! $answares->answare6 !!}</p>
                           
                           @if($answares->file6 != '')
                           <a href="{{asset('uploads/file/'.$answares->file6)}}" download>{{$answares->file6}}</a>
                           @endif
                       </td>
                       <td>
+                      <a class="btn btn-primary" href="{{url('question?topic6=1')}}">Edit</a>
                       <a class="btn btn-primary" onclick="return confirm('Are you sure? Delete this data.')" href="{{ route('answare.delete',6) }}">Delete</a>
                       </td>
                     </tr>
@@ -357,13 +363,14 @@ a, button, code, div, img, input, label, li, p, pre, select, span, svg, table, t
                           <div class="question">
                             <h4>Customer:</h4>
                           </div>
-                          <p>{{$answares->answare7}}</p>
+                          <p>{!! $answares->answare7 !!}</p>
                           
                           @if($answares->file7 != '')
                           <a href="{{asset('uploads/file/'.$answares->file7)}}" download>{{$answares->file7}}</a>
                           @endif
                       </td>
                       <td>
+                      <a class="btn btn-primary" href="{{url('question?topic7=1')}}">Edit</a>
                       <a class="btn btn-primary" onclick="return confirm('Are you sure? Delete this data.')" href="{{ route('answare.delete',7) }}">Delete</a>
                       </td>
                     </tr>
@@ -375,13 +382,14 @@ a, button, code, div, img, input, label, li, p, pre, select, span, svg, table, t
                           <div class="question">
                             <h4>Tools:</h4>
                           </div>
-                          <p>{{$answares->answare8}}</p>
+                          <p>{!! $answares->answare8 !!}</p>
                           
                           @if($answares->file8 != '')
                           <a href="{{asset('uploads/file/'.$answares->file8)}}" download>{{$answares->file8}}</a>
                           @endif
                       </td>
                       <td>
+                      <a class="btn btn-primary" href="{{url('question?topic8=1')}}">Edit</a>
                       <a class="btn btn-primary" onclick="return confirm('Are you sure? Delete this data.')" href="{{ route('answare.delete',8) }}">Delete</a>
                       </td>
                     </tr>
@@ -393,13 +401,14 @@ a, button, code, div, img, input, label, li, p, pre, select, span, svg, table, t
                           <div class="question">
                             <h4>Revenue and Costs:</h4>
                           </div>
-                          <p>{{$answares->answare9}}</p>
+                          <p>{!! $answares->answare9 !!}</p>
                           
                           @if($answares->file9 != '')
                           <a href="{{asset('uploads/file/'.$answares->file9)}}" download>{{$answares->file9}}</a>
                           @endif
                       </td>
                       <td>
+                      <a class="btn btn-primary" href="{{url('question?topic9=1')}}">Edit</a>
                       <a class="btn btn-primary" onclick="return confirm('Are you sure? Delete this data.')" href="{{ route('answare.delete',9) }}">Delete</a>
                       </td>
                     </tr>
@@ -459,18 +468,9 @@ a, button, code, div, img, input, label, li, p, pre, select, span, svg, table, t
 <script type="text/javascript">
 function demoFromHTML() {
   var pdf = new jsPDF('p', 'pt', 'a4');
-  // source can be HTML-formatted string, or a reference
-  // to an actual DOM element from which the text will be scraped.
   source = $('#downloadArea')[0];
-
-  // we support special element handlers. Register them with jQuery-style 
-  // ID selector for either ID or node name. ("#iAmID", "div", "span" etc.)
-  // There is no support for any other type of selectors 
-  // (class, of compound) at this time.
   specialElementHandlers = {
-    // element with id of "bypass" - jQuery style selector
     '#bypassme': function(element, renderer) {
-      // true = "handled elsewhere, bypass text extraction"
       return true
     }
   };
@@ -480,19 +480,15 @@ function demoFromHTML() {
     left: 40,
     width: 522
   };
-  // all coords and widths are in jsPDF instance's declared units
-  // 'inches' in this case
   pdf.fromHTML(
-    source, // HTML string or DOM elem ref.
-    margins.left, // x coord
-    margins.top, { // y coord
-      'width': margins.width, // max width of content on PDF
+    source,
+    margins.left,
+    margins.top, { 
+      'width': margins.width,
       'elementHandlers': specialElementHandlers
     },
 
     function(dispose) {
-      // dispose: object with X, Y of the last line add to the PDF 
-      //          this allow the insertion of new lines after html
       pdf.save('answer.pdf');
     }, margins);
 }

@@ -70,6 +70,11 @@ input:focus, button:focus {
               </div>
               <div class="d-grid">
                 <button type="submit" class="btn text-light main-bg">{{ __('Login') }}</button>
+                @if (Route::has('password.request'))
+                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                        {{ __('Forgot Your Password?') }}
+                    </a>
+                @endif
               </div>
             </form>
           </div>

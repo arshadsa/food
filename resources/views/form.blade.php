@@ -120,12 +120,12 @@ button:hover {
 </div>
 <form class="was-validated" id="quesform" action="{{route('answare.store')}}" method="POST" enctype="multipart/form-data">
   @csrf
-
+<h1>Question:</h1>
   <!-- One "tab" for each step in the form: -->
   @if($topic1 == 1)
   <div class="tab">
     <div class="row">
-		<div class="col-md-8">
+      <div class="col-md-8">
 					<div class="question">
 						<h4>Tast 1 Sample direction to write something:</h4>
 						<a href="https://google.com" target="_blank">Step_5template.pptx</a>
@@ -148,8 +148,8 @@ button:hover {
     </div>
     <div class="row pt-5">
       <div class="textarea has-validation">
-							<h4>My Action plan:</h4>
-							<textarea rows="5" id="answare1" name="answare1" class="form-control" ></textarea>
+							<h4>My business plan:</h4>
+              <textarea rows="5" id="answare1" name="answare1" class="form-control answarearea" >@if(isset($answer1)) {!! $answer1->answare1 !!} @endif</textarea>
               <div class="invalid-feedback">
               Please enter information or Upload file
               </div>
@@ -157,15 +157,20 @@ button:hover {
 						<div class="dropzone">
 							<input type="file" name="file1" id="file1" class="dropify" />
 						</div>
+            @if(isset($answer1->file1))
+            @if($answer1->file1 != '')
+            <img src="{{asset('uploads/file/'.$answer1->file1 )}}" height="200px" width="200px">
+            @endif
+            @endif
   </div>
   </div>
   @endif
   @if($topic2 == 1)
   <div class="tab">
   <div class="row">
-	<div class="col-md-8">
-					<div class="question">
-						<h4>Tast 1 Sample direction to write something:</h4>
+      <div class="col-md-8">
+      <div class="question">
+						<h4>Tast 2 Sample direction to write something:</h4>
 						<a href="https://google.com" target="_blank">Step_5template.pptx</a>
 					</div>
 					<div class="question">
@@ -184,14 +189,10 @@ button:hover {
           <img class="img-fluid" src="{{asset('assets/img/grid.jpg')}}">
         </div>
     </div>
-        <div class="col-md-4">
-          <img class="img-fluid" src="{{asset('assets/img/food_supply.jpg')}}">
-        </div>
-    </div>
     <div class="row pt-5">
       <div class="textarea has-validation">
-							<h4>My Action plan:</h4>
-							<textarea rows="5" id="answare2" name="answare2" class="form-control" ></textarea>
+							<h4>My business plan:</h4>
+							<textarea rows="5" id="answare2" name="answare2" class="form-control answarearea" >@if(isset($answer2)) {!! $answer2->answare2 !!} @endif</textarea>
               <div class="invalid-feedback">
               Please enter information or Upload file
               </div>
@@ -199,15 +200,20 @@ button:hover {
 						<div class="dropzone">
 							<input type="file" name="file2" id="file2" class="dropify" />
 						</div>
+            @if(isset($answer2->file2))
+            @if($answer2->file2 != '')
+            <img src="{{asset('uploads/file/'.$answer2->file2 )}}" height="200px" width="200px">
+            @endif
+            @endif
   </div>
   </div>
   @endif
   @if($topic3 == 1)
   <div class="tab">
   <div class="row">
-	<div class="col-md-8">
-					<div class="question">
-						<h4>Tast 1 Sample direction to write something:</h4>
+      <div class="col-md-8">
+      <div class="question">
+						<h4>Tast 3 Sample direction to write something:</h4>
 						<a href="https://google.com" target="_blank">Step_5template.pptx</a>
 					</div>
 					<div class="question">
@@ -226,14 +232,10 @@ button:hover {
           <img class="img-fluid" src="{{asset('assets/img/grid.jpg')}}">
         </div>
     </div>
-        <div class="col-md-4">
-          <img class="img-fluid" src="{{asset('assets/img/food_supply.jpg')}}">
-        </div>
-    </div>
     <div class="row pt-5">
       <div class="textarea has-validation">
-							<h4>My Action plan:</h4>
-							<textarea rows="5" id="answare3" name="answare3" class="form-control" ></textarea>
+							<h4>My business plan:</h4>
+              <textarea rows="5" id="answare3" name="answare3" class="form-control answarearea" >@if(isset($answer3)) {!! $answer3->answare3 !!} @endif</textarea>
               <div class="invalid-feedback">
               Please enter information or Upload file
               </div>
@@ -241,15 +243,20 @@ button:hover {
 						<div class="dropzone">
 							<input type="file" name="file3" id="file3" class="dropify" />
 						</div>
+            @if(isset($answer3->file3))
+            @if($answer3->file3 != '')
+            <img src="{{asset('uploads/file/'.$answer3->file3 )}}" height="200px" width="200px">
+            @endif
+            @endif
   </div>
   </div>
   @endif
   @if($topic4 == 1)
   <div class="tab">
   <div class="row">
-	<div class="col-md-8">
-					<div class="question">
-						<h4>Tast 1 Sample direction to write something:</h4>
+      <div class="col-md-8">
+      <div class="question">
+						<h4>Tast 4 Sample direction to write something:</h4>
 						<a href="https://google.com" target="_blank">Step_5template.pptx</a>
 					</div>
 					<div class="question">
@@ -268,14 +275,10 @@ button:hover {
           <img class="img-fluid" src="{{asset('assets/img/grid.jpg')}}">
         </div>
     </div>
-        <div class="col-md-4">
-          <img class="img-fluid" src="{{asset('assets/img/food_supply.jpg')}}">
-        </div>
-    </div>
     <div class="row pt-5">
       <div class="textarea has-validation">
-							<h4>My Action plan:</h4>
-							<textarea rows="5" id="answare4" name="answare4" class="form-control" ></textarea>
+							<h4>My business plan:</h4>
+							<textarea rows="5" id="answare4" name="answare4" class="form-control answarearea" >@if(isset($answer4)) {!! $answer4->answare4 !!} @endif</textarea>
               <div class="invalid-feedback">
               Please enter information or Upload file
               </div>
@@ -283,15 +286,20 @@ button:hover {
 						<div class="dropzone">
 							<input type="file" name="file4" id="file4" class="dropify" />
 						</div>
+            @if(isset($answer4->file4))
+            @if($answer4->file4 != '')
+            <img src="{{asset('uploads/file/'.$answer4->file4 )}}" height="200px" width="200px">
+            @endif
+            @endif
   </div>
   </div>
   @endif
   @if($topic5 == 1)
   <div class="tab">
   <div class="row">
-	<div class="col-md-8">
-					<div class="question">
-						<h4>Tast 1 Sample direction to write something:</h4>
+      <div class="col-md-8">
+      <div class="question">
+						<h4>Tast 5 Sample direction to write something:</h4>
 						<a href="https://google.com" target="_blank">Step_5template.pptx</a>
 					</div>
 					<div class="question">
@@ -310,14 +318,10 @@ button:hover {
           <img class="img-fluid" src="{{asset('assets/img/grid.jpg')}}">
         </div>
     </div>
-        <div class="col-md-4">
-          <img class="img-fluid" src="{{asset('assets/img/food_supply.jpg')}}">
-        </div>
-    </div>
     <div class="row pt-5">
       <div class="textarea has-validation">
-							<h4>My Action plan:</h4>
-							<textarea rows="5" id="answare5" name="answare5" class="form-control" ></textarea>
+							<h4>My business plan:</h4>
+							<textarea rows="5" id="answare5" name="answare5" class="form-control answarearea" >@if(isset($answer5)) {!! $answer5->answare5 !!} @endif</textarea>
               <div class="invalid-feedback">
               Please enter information or Upload file
               </div>
@@ -325,15 +329,20 @@ button:hover {
 						<div class="dropzone">
 							<input type="file" name="file5" id="file5" class="dropify" />
 						</div>
+            @if(isset($answer5->file5))
+            @if($answer5->file5 != '')
+            <img src="{{asset('uploads/file/'.$answer5->file5 )}}" height="200px" width="200px">
+            @endif
+            @endif
   </div>
   </div>
   @endif
   @if($topic6 == 1)
   <div class="tab">
   <div class="row">
-	<div class="col-md-8">
-					<div class="question">
-						<h4>Tast 1 Sample direction to write something:</h4>
+      <div class="col-md-8">
+      <div class="question">
+						<h4>Tast 6 Sample direction to write something:</h4>
 						<a href="https://google.com" target="_blank">Step_5template.pptx</a>
 					</div>
 					<div class="question">
@@ -352,14 +361,10 @@ button:hover {
           <img class="img-fluid" src="{{asset('assets/img/grid.jpg')}}">
         </div>
     </div>
-        <div class="col-md-4">
-          <img class="img-fluid" src="{{asset('assets/img/food_supply.jpg')}}">
-        </div>
-    </div>
     <div class="row pt-5">
       <div class="textarea has-validation">
-							<h4>My Action plan:</h4>
-							<textarea rows="5" id="answare6" name="answare6" class="form-control" ></textarea>
+							<h4>My business plan:</h4>
+              <textarea rows="5" id="answare6" name="answare6" class="form-control answarearea" >@if(isset($answer6)) {!! $answer6->answare6 !!} @endif</textarea>
               <div class="invalid-feedback">
               Please enter information or Upload file
               </div>
@@ -367,15 +372,20 @@ button:hover {
 						<div class="dropzone">
 							<input type="file" name="file6" id="file6" class="dropify" />
 						</div>
+            @if(isset($answer6->file6))
+            @if($answer6->file6 != '')
+            <img src="{{asset('uploads/file/'.$answer6->file6 )}}" height="200px" width="200px">
+            @endif
+            @endif
   </div>
   </div>
   @endif
   @if($topic7 == 1)
   <div class="tab">
   <div class="row">
-	<div class="col-md-8">
-					<div class="question">
-						<h4>Tast 1 Sample direction to write something:</h4>
+      <div class="col-md-8">
+      <div class="question">
+						<h4>Tast 7 Sample direction to write something:</h4>
 						<a href="https://google.com" target="_blank">Step_5template.pptx</a>
 					</div>
 					<div class="question">
@@ -394,14 +404,10 @@ button:hover {
           <img class="img-fluid" src="{{asset('assets/img/grid.jpg')}}">
         </div>
     </div>
-        <div class="col-md-4">
-          <img class="img-fluid" src="{{asset('assets/img/food_supply.jpg')}}">
-        </div>
-    </div>
     <div class="row pt-5">
       <div class="textarea has-validation">
-							<h4>My Action plan:</h4>
-							<textarea rows="5" id="answare7" name="answare7" class="form-control" ></textarea>
+							<h4>My business plan:</h4>
+							<textarea rows="5" id="answare7" name="answare7" class="form-control answarearea" >@if(isset($answer7)) {!! $answer7->answare7 !!} @endif</textarea>
               <div class="invalid-feedback">
               Please enter information or Upload file
               </div>
@@ -409,15 +415,20 @@ button:hover {
 						<div class="dropzone">
 							<input type="file" name="file7" id="file7" class="dropify" />
 						</div>
+            @if(isset($answer7->file7))
+            @if($answer7->file7 != '')
+            <img src="{{asset('uploads/file/'.$answer7->file7 )}}" height="200px" width="200px">
+            @endif
+            @endif
   </div>
   </div>
   @endif
   @if($topic8 == 1)
   <div class="tab">
   <div class="row">
-	<div class="col-md-8">
-					<div class="question">
-						<h4>Tast 1 Sample direction to write something:</h4>
+      <div class="col-md-8">
+      <div class="question">
+						<h4>Tast 8 Sample direction to write something:</h4>
 						<a href="https://google.com" target="_blank">Step_5template.pptx</a>
 					</div>
 					<div class="question">
@@ -436,14 +447,10 @@ button:hover {
           <img class="img-fluid" src="{{asset('assets/img/grid.jpg')}}">
         </div>
     </div>
-        <div class="col-md-4">
-          <img class="img-fluid" src="{{asset('assets/img/food_supply.jpg')}}">
-        </div>
-    </div>
     <div class="row pt-5">
       <div class="textarea has-validation">
-							<h4>My Action plan:</h4>
-							<textarea rows="5" id="answare8" name="answare8" class="form-control" ></textarea>
+							<h4>My business plan:</h4>
+							<textarea rows="5" id="answare8" name="answare8" class="form-control answarearea" >@if(isset($answer8)) {!! $answer8->answare8 !!} @endif</textarea>
               <div class="invalid-feedback">
               Please enter information or Upload file
               </div>
@@ -451,15 +458,20 @@ button:hover {
 						<div class="dropzone">
 							<input type="file" name="file8" id="file8" class="dropify" />
 						</div>
+            @if(isset($answer8->file8))
+            @if($answer8->file8 != '')
+            <img src="{{asset('uploads/file/'.$answer8->file8 )}}" height="200px" width="200px">
+            @endif
+            @endif
   </div>
   </div>
   @endif
   @if($topic9 == 1)
   <div class="tab">
   <div class="row">
-	<div class="col-md-8">
-					<div class="question">
-						<h4>Tast 1 Sample direction to write something:</h4>
+      <div class="col-md-8">
+      <div class="question">
+						<h4>Tast 9 Sample direction to write something:</h4>
 						<a href="https://google.com" target="_blank">Step_5template.pptx</a>
 					</div>
 					<div class="question">
@@ -478,14 +490,10 @@ button:hover {
           <img class="img-fluid" src="{{asset('assets/img/grid.jpg')}}">
         </div>
     </div>
-        <div class="col-md-4">
-          <img class="img-fluid" src="{{asset('assets/img/food_supply.jpg')}}">
-        </div>
-    </div>
     <div class="row pt-5">
       <div class="textarea has-validation">
-							<h4>My Action plan:</h4>
-							<textarea rows="5" id="answare9" name="answare9" class="form-control" ></textarea>
+							<h4>My business plan:</h4>
+							<textarea rows="5" id="answare9" name="answare9" class="form-control answarearea" >@if(isset($answer9)) {!! $answer9->answare9 !!} @endif</textarea>
               <div class="invalid-feedback">
               Please enter information or Upload file
               </div>
@@ -493,6 +501,11 @@ button:hover {
 						<div class="dropzone">
 							<input type="file" name="file9" id="file9" class="dropify" />
 						</div>
+            @if(isset($answer9->file9))
+            @if($answer9->file9 != '')
+            <img src="{{asset('uploads/file/'.$answer9->file9 )}}" height="200px" width="200px">
+            @endif
+            @endif
   </div>
   </div>
   @endif
@@ -609,13 +622,68 @@ function fixStepIndicator(n) {
   x[n].className += " active";
 }
 </script>
-
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> -->
 <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script> -->
+<script src="//cdn.ckeditor.com/4.19.0/basic/ckeditor.js"></script>
 
+<script type="text/javascript">
+    @if($topic1 == 1)
+    CKEDITOR.replace('answare1', {
+        filebrowserUploadUrl: "{{route('ckeditor.upload', ['_token' => csrf_token() ])}}",
+        filebrowserUploadMethod: 'form'
+    });
+    @endif
+    @if($topic2 == 1)
+    CKEDITOR.replace('answare2', {
+        filebrowserUploadUrl: "{{route('ckeditor.upload', ['_token' => csrf_token() ])}}",
+        filebrowserUploadMethod: 'form'
+    });
+    @endif
+    @if($topic3 == 1)
+    CKEDITOR.replace('answare3', {
+        filebrowserUploadUrl: "{{route('ckeditor.upload', ['_token' => csrf_token() ])}}",
+        filebrowserUploadMethod: 'form'
+    });
+    @endif
+    @if($topic4 == 1)
+    CKEDITOR.replace('answare4', {
+        filebrowserUploadUrl: "{{route('ckeditor.upload', ['_token' => csrf_token() ])}}",
+        filebrowserUploadMethod: 'form'
+    });
+    @endif
+    @if($topic5 == 1)
+    CKEDITOR.replace('answare5', {
+        filebrowserUploadUrl: "{{route('ckeditor.upload', ['_token' => csrf_token() ])}}",
+        filebrowserUploadMethod: 'form'
+    });
+    @endif
+    @if($topic6 == 1)
+    CKEDITOR.replace('answare6', {
+        filebrowserUploadUrl: "{{route('ckeditor.upload', ['_token' => csrf_token() ])}}",
+        filebrowserUploadMethod: 'form'
+    });
+    @endif
+    @if($topic7 == 1)
+    CKEDITOR.replace('answare7', {
+        filebrowserUploadUrl: "{{route('ckeditor.upload', ['_token' => csrf_token() ])}}",
+        filebrowserUploadMethod: 'form'
+    });
+    @endif
+    @if($topic8 == 1)
+    CKEDITOR.replace('answare8', {
+        filebrowserUploadUrl: "{{route('ckeditor.upload', ['_token' => csrf_token() ])}}",
+        filebrowserUploadMethod: 'form'
+    });
+    @endif
+    @if($topic9 == 1)
+    CKEDITOR.replace('answare9', {
+        filebrowserUploadUrl: "{{route('ckeditor.upload', ['_token' => csrf_token() ])}}",
+        filebrowserUploadMethod: 'form'
+    });
+    @endif
 
+</script>
 </body>
 </html>
